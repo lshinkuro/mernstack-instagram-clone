@@ -1,17 +1,18 @@
 import React from 'react';
+import Navbar from './components/Navbar'
 import './App.css';
 import {BrowserRouter,Route} from 'react-router-dom'
-import Navbar from './components/Navbar'
 import Home from './components/screen/Home'
 import Signin from './components/screen/Signin'
 import Signup from './components/screen/Signup'
-import Profile from './components/screen/Profile'  
+import Profile from './components/screen/Profile'
+import CreatePost from './components/screen/CreatePost'  
 
 function App() {
   return (
       <BrowserRouter>
           <Navbar/>
-          <Route path="/">
+          <Route  exact path="/">
               <Home />
           </Route>
           <Route path="/signin">
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/profile">
               <Profile />
+          </Route>
+          <Route path="/createpost">
+              <CreatePost />
           </Route>
       </BrowserRouter>
   );

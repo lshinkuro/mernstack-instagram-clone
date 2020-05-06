@@ -15,8 +15,10 @@ const Home =()=>{
                    <p>this is amazing post</p>
                    <input type="text" placeholder="add acomment"/>
                </div>
+            </div>
+        
            </div>
-       </div>
+
     )
 }
 

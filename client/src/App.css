@@ -18,3 +18,27 @@ a{
   max-width: 400px;
   margin:20px auto;
 }
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid blue !important;
+  box-shadow: 0 1px 0 0 blue !important;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  
+}
+
+.item{
+  width: 30%;
+  padding: 5px;
+  
+}
+
+.home-card{
+  max-width: 500px;
+  height: max-content;
+  margin: 26px auto;
+}

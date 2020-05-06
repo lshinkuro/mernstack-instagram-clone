@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './components/Navbar'
 import './App.css';
 import {BrowserRouter,Route} from 'react-router-dom'
-import Home from './components/Home'
-import Signin from './components/Login'
-import Signup from './components/Signup'
-import Profile from './components/Profile'  
+import Navbar from './components/Navbar'
+import Home from './components/screen/Home'
+import Signin from './components/screen/Signin'
+import Signup from './components/screen/Signup'
+import Profile from './components/screen/Profile'  
 
 function App() {
   return (

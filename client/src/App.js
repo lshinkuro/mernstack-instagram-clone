@@ -1,13 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import Navbar from './components/Navbar'
 import './App.css';
+import {BrowserRouter,Route} from 'react-router-dom'
+import Home from './components/Home'
+import Signin from './components/Login'
+import Signup from './components/Signup'
+import Profile from './components/Profile'  
 
 function App() {
   return (
-    <div className="App">
-      <h1>hallo semuanya</h1>
-      <a className="waves-effect waves-light btn">button</a>
-    </div>
+      <BrowserRouter>
+          <Navbar/>
+          <Route path="/">
+              <Home />
+          </Route>
+          <Route path="/signin">
+              <Signin />
+          </Route>
+          <Route path="/signup">
+              <Signup />
+          </Route>
+          <Route path="/profile">
+              <Profile />
+          </Route>
+      </BrowserRouter>
   );
 }
 

@@ -10,23 +10,23 @@ import CreatePost from './components/screen/CreatePost'
 import {reducer,initialState}from './reducers/userReducer'
 
 
-export const userContext=createContext()
+export const UserContext=createContext()
 
 const Routing =()=>{
     const history = useHistory()
-    const {state,dispatch}=useContext(userContext)
+    const {state,dispatch}=useContext(UserContext)
     useEffect(()=>{
-        const user =JSON.parse(localStorage.getItem("user"))
+        const user =JSON.parse(localStorage.getItem('user'))
+        console.log(typeof(user),user)
         if(user){
             dispatch({type:"USER",payload:user})
             history.push("/")
         }else{
-            history.push("/signin")
+            history.push("/signup")
         }
     },[])
     return(
         <Switch>
-            
             <Route exact path="/">
             <Home />
             </Route>
@@ -42,6 +42,7 @@ const Routing =()=>{
             <Route path="/createpost">
                 <CreatePost />
             </Route>
+           
         </Switch>
     )
 }
@@ -50,12 +51,12 @@ function App() {
     const [state,dispatch]=useReducer(reducer,initialState)
 
     return (
-        <userContext.Provider value={{state,dispatch}}>
+        <UserContext.Provider value={{state,dispatch}}>
         <BrowserRouter>
                <Navbar/>
-               <Routing/>
+                <Routing/>
         </BrowserRouter>
-        </userContext.Provider>
+        </UserContext.Provider>
     );
 }
 

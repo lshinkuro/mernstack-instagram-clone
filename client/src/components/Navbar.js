@@ -9,7 +9,16 @@ const Navbar = ()=>{
       if(state){
         return [
           <li><Link to="/profile">Profile</Link></li>,
-          <li><Link to="/createpost">CreatePost</Link></li>
+          <li><Link to="/createpost">CreatePost</Link></li>,
+          <li>
+              <button className="btn waves-effect waves-light #64b5f6 red-darken-1"
+                      onClick={()=>{
+                        localStorage.clear()
+                        dispatch({type:"CLEAR"})
+                      }}
+              >Logout
+              </button>
+          </li>
         ]
       }else{
         return [

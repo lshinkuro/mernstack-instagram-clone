@@ -14,8 +14,8 @@ const  CreatePost =()=>{
             fetch("/createpost",{
                 method:"post",
                 headers:{
+                    "Authorization":"Bearer "+localStorage.getItem("jwt"),
                     "Content-Type":"application/json",
-                    "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZWFmZWY5OGZlYmYwOTI0ZDcyNzEwYmEiLCJpYXQiOjE1ODg5MjIzMjJ9.MylZFfiqABXKuUU4AmIRMRBJI5ppa7x5FLPso1JJ68I"
                 },
                 body:JSON.stringify({
                     title,

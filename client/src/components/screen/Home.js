@@ -24,7 +24,8 @@ const Home =()=>{
                             <img alt='some value' src={item.photo}/>
                         </div>
                         <div className="card-content">
-                        <i className="material-icons" style={{color:"red"}}>favorite</i>
+                        <i className="material-icons" style={{color:"red",marginRight:"10px"}}>favorite</i>
+                        <i className="material-icons" style={{color:"red"}}>comment</i>
                             <h6>{item.title}</h6>
                             <p>{item.body}</p>
                             <input type="text" placeholder="add acomment"/>

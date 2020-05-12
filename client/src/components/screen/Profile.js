@@ -1,5 +1,6 @@
 import React,{useEffect, useState,useContext}from 'react'
 import {UserContext} from '../../App'
+import {Link} from 'react-router-dom'
 
 const Profile =()=>{
     const  [pics,setPics]= useState([])
@@ -36,6 +37,16 @@ const Profile =()=>{
                     </div>
                 </div>
             </div>
+            <nav className="content">
+            <div className="nav-content-ig white center-align">
+                <ul>
+                    <li><Link to="/">Postingan</Link></li>
+                    <li><Link to="#test2">IGTV</Link></li>
+                    <li><Link to="#test3">Tersimpan</Link></li>
+                    <li><Link to="#test4">Ditandai</Link></li>
+                </ul>
+            </div>
+            </nav>
             <div className="gallery">
                     {
                         pics.map(item=>{

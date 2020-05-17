@@ -32,7 +32,7 @@ const Navbar = ()=>{
     return(
       <nav>
         <div className="nav-wrapper white" style={{justifyContent:"space-around"}}>
-        <Link href={state?"/":"/signin"} className="brand-logo left">INSTAGRAM</Link>
+        <Link to={state?"/":"/signin"} className="brand-logo left">INSTAGRAM</Link>
           <ul id="nav-mobile" className="right">
             
               {renderList()}

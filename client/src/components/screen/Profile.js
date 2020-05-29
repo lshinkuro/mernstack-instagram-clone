@@ -41,7 +41,7 @@ const Profile =()=>{
             <div className="nav-content-ig white center-align">
                 <ul>
                     <li><Link to="/">Postingan</Link></li>
-                    <li><Link to="#test2">IGTV</Link></li>
+                    <li><Link to="/userprofile">IGTV</Link></li>
                     <li><Link to="#test3">Tersimpan</Link></li>
                     <li><Link to="#test4">Ditandai</Link></li>
                 </ul>

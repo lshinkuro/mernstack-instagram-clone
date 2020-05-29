@@ -1,14 +1,17 @@
 import React,{useEffect,createContext,useReducer,useContext} from 'react';
 import Navbar from './components/Navbar'
 import './App.css';
-import {BrowserRouter,Route,Switch,useHistory }from 'react-router-dom'
+import {BrowserRouter,Route,Switch,useHistory}from 'react-router-dom'
 import Home from './components/screen/Home'
 import Signin from './components/screen/Signin'
 import Signup from './components/screen/Signup'
 import Profile from './components/screen/Profile'
 import CreatePost from './components/screen/CreatePost'  
 import {reducer,initialState}from './reducers/userReducer'
-import UserProfile from "./components/screen/UserProfile";
+import UserProfile from './components/screen/UserProfile'
+
+
+
 
 
 export const UserContext=createContext()
@@ -43,10 +46,9 @@ const Routing =()=>{
             <Route path="/createpost">
                 <CreatePost />
             </Route>
-            <Route path="/profile/:userid">
+            <Route path="/userprofile/:userid">
                 <UserProfile />
             </Route>
-           
         </Switch>
     )
 }

@@ -31,7 +31,7 @@ const Profile =()=>{
                 <div>
         <h5>{state?state.name:"loading"}</h5>
                     <div style={{display:"flex",justifyContent:"space-around"}}>
-                        <h5>20 post</h5>
+                        <h5>{pics.length} post</h5>
                         <h5>20 followers</h5>
                         <h5>20 following</h5>
                     </div>
@@ -42,7 +42,7 @@ const Profile =()=>{
                 <ul>
                     <li><Link to="/">Postingan</Link></li>
                     <li><Link to="/userprofile">IGTV</Link></li>
-                    <li><Link to="#test3">Tersimpan</Link></li>
+                    <li><Link to="/contactuser">Tersimpan</Link></li>
                     <li><Link to="#test4">Ditandai</Link></li>
                 </ul>
             </div>

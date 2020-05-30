@@ -9,10 +9,10 @@ import Profile from './components/screen/Profile'
 import CreatePost from './components/screen/CreatePost'  
 import {reducer,initialState}from './reducers/userReducer'
 import UserProfile from './components/screen/UserProfile'
+import ContactUser from './components/screen/ContactUser'
 
 
-
-
+const contacts = ["James Smith", "Thomas Anderson", "Bruce Wayne"];
 
 export const UserContext=createContext()
 
@@ -48,6 +48,9 @@ const Routing =()=>{
             </Route>
             <Route path="/userprofile/:userid">
                 <UserProfile />
+            </Route>
+            <Route path="/contactuser">
+                <ContactUser data={contacts}/>
             </Route>
         </Switch>
     )

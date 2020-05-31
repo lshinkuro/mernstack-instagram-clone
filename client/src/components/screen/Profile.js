@@ -43,7 +43,7 @@ const Profile =()=>{
                     <li><Link to="/">Postingan</Link></li>
                     <li><Link to="/userprofile">IGTV</Link></li>
                     <li><Link to="/contactuser">Tersimpan</Link></li>
-                    <li><Link to="#test4">Ditandai</Link></li>
+                    <li><Link to="/drawmountain">Ditandai</Link></li>
                 </ul>
             </div>
             </nav>

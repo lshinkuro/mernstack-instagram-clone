@@ -13,6 +13,7 @@ const Profile =()=>{
         .then(result=>{
             console.log(result)
             setPics(result.mypost)
+            console.log(pics)
         })
     },[])
     return(
@@ -29,12 +30,13 @@ const Profile =()=>{
                 />
                 </div>
                 <div>
-        <h5>{state?state.name:"loading"}</h5>
-                    <div style={{display:"flex",justifyContent:"space-around"}}>
-                        <h5>{state?pics.length:0} post</h5>
-                        <h5>{state?state.followers.length:"0"} followers</h5>
-                        <h5> {state?state.following.length:"0"} following</h5>
-                    </div>
+                   <h4>{state?state.name:"loading"}</h4>
+                   <h5>{state?state.email:"loading"}</h5>
+                    <div style={{display:"flex",justifyContent:"space-between",width:"108%"}}>
+                       <h6>{pics.length} posts</h6>
+                       <h6>{state?state.followers.length:"0"} followers</h6>
+                       <h6>{state?state.following.length:"0"} following</h6>
+                   </div>
                 </div>
             </div>
             <nav className="content">
